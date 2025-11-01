@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abraham Duran - Brand Colors</title>
+  <style>
+    :root {
+      --bg: #0b0d14;
+      --bg-panel: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --card: #111827;
+      --border: #273244;
+      --accent: #60a5fa;
+      --focus: #f59e0b;
+    }
+
+    [data-theme="light"] {
+      --bg: #f5f7fb;
+      --bg-panel: #ffffff;
+      --text: #0b0d14;
+      --muted: #4b5563;
+      --card: #ffffff;
+      --border: #d5dbe6;
+      --accent: #2563eb;
+      --focus: #ca8a04;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--bg-panel);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 16px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: .2px;
+      font-size: 18px;
+    }
+
+    .spacer {
+      flex: 1;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      opacity: .8;
+      padding: 6px 10px;
+      border-radius: 10px;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      outline: none;
+      background: var(--border);
+      opacity: 1;
+    }
+
+    .btn {
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      outline: 2px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .search {
+      min-width: 240px;
+      flex: 1 1 260px;
+    }
+
+    input[type="search"] {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: var(--bg-panel);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+
+    input[type="search"]::placeholder {
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 16px 56px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin: 12px 0 8px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin: 28px 0 12px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .tools {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      background: var(--bg-panel);
+      border-radius: 16px;
+      overflow: clip;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .swatch {
+      height: 120px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      background-image: linear-gradient(45deg, #80808022 25%, transparent 25%),
+        linear-gradient(-45deg, #80808022 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #80808022 75%),
+        linear-gradient(-45deg, transparent 75%, #80808022 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+    }
+
+    .swatch>.ink {
+      position: absolute;
+      inset: 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content {
+      padding: 12px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .kvs {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 10px;
+      row-gap: 4px;
+      font-size: 13px;
+    }
+
+    .kvs .k {
+      color: var(--muted);
+    }
+
+    .badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 12px;
+      background: #00000020;
+    }
+
+    .good {
+      background: #16653433;
+      border-color: #166534;
+    }
+
+    .warn {
+      background: #854d0e33;
+      border-color: #854d0e;
+    }
+
+    .bad {
+      background: #7f1d1d33;
+      border-color: #7f1d1d;
+    }
+
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 4px 6px;
+      font-size: 12px;
+      background: var(--card);
+    }
+
+    .tints,
+    .shades {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(28px, 1fr));
+      gap: 4px;
+    }
+
+    .mini {
+      height: 28px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .footer {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+  <header>
+    <div class="wrap">
+      <div class="row">
+        <div class="brand">Abraham Duran - Brand Colors</div>
+        <nav class="row" aria-label="Secciones">
+          <a href="#secC">Paleta de Colores</a>
+          <a href="#secA">Paleta Generada 1</a>
+          <a href="#secB">Paleta Generada 2</a>
+        </nav>
+        <div class="spacer"></div>
+        <input id="qGlobal" class="search" type="search" placeholder="Búsqueda global (nombre, rol, grupo, código…)"
+          aria-label="Búsqueda global" />
+        <button id="themeBtn" class="btn" aria-pressed="true" aria-label="Cambiar tema">🌗 Tema</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1>Especificación de Color</h1>
+    <div class="meta">Generado: 2025-10-31 23:42</div>
+    <section id="secC" aria-labelledby="hC">
+      <h2 id="hC">Paleta de Colores por Colorimetría</h2>
+      <div class="panel" style="margin-bottom:12px;">
+        <div class="tools">
+          <input id="qC" type="search" placeholder="Buscar en Paleta de Colores por Colorimetría…"
+            aria-label="Buscar en sección Paleta de Colores por Colorimetría" />
+          <div class="meta" id="countC" aria-live="polite">0 colores</div>
+        </div>
+      </div>
+      <div class="grid" id="gridC" aria-live="polite"></div>
+    </section>
+
+    <section id="secA" aria-labelledby="hA">
+      <h2 id="hA">Paleta Generada 1</h2>
+      <div class="panel" style="margin-bottom:12px;">
+        <div class="tools">
+          <input id="qA" type="search" placeholder="Buscar en Paleta Generada 1…"
+            aria-label="Buscar en sección Paleta Generada 1" />
+          <div class="meta" id="countA" aria-live="polite">0 colores</div>
+        </div>
+      </div>
+      <div class="grid" id="gridA" aria-live="polite"></div>
+    </section>
+
+    <section id="secB" aria-labelledby="hB" style="margin-top: 28px;">
+      <h2 id="hB">Paleta Generada 2</h2>
+      <div class="panel" style="margin-bottom:12px;">
+        <div class="tools">
+          <input id="qB" type="search" placeholder="Buscar en Paleta Generada 2…"
+            aria-label="Buscar en sección Paleta Generada 2" />
+          <div class="meta" id="countB" aria-live="polite">0 colores</div>
+        </div>
+      </div>
+      <div class="grid" id="gridB" aria-live="polite"></div>
+    </section>
+    <div class="footer">WCAG AA/AAA verificación para contrastes de texto vs negro (#000) y blanco (#FFF). Copia de
+      códigos en un clic. Navegación con teclado soportada.</div>
+    <div id="ariaLive" class="sr-only" aria-live="polite"></div>
+  </main>
+
+  <!-- Inline JSON fallbacks (the page uses these directly) -->
+  <script id="jsonA" type="application/json">{
+  "primary": {
+    "name": "Azul Noche Caribe",
+    "hex": "#174077",
+    "rgb": { "r": 23, "g": 64, "b": 119 },
+    "role": "primary",
+    "notes": "Navy frío acorde a Invierno; aporta autoridad sin apagar piel media neutra.",
+    "tints": { "t10": "#2E5385", "t30": "#5D79A0", "t60": "#A2B3C9" },
+    "shades": { "s10": "#153A6B", "s30": "#102D53" }
+  },
+  "secondary": [
+    {
+      "name": "Esmeralda Estudio",
+      "hex": "#007A7E",
+      "rgb": { "r": 0, "g": 122, "b": 126 },
+      "role": "secondary",
+      "notes": "Verde con componente azul; funciona con props y fondos en estudio.",
+      "tints": { "t10": "#1A878B", "t30": "#4CA2A5", "t60": "#99CACB" },
+      "shades": { "s10": "#006E71", "s30": "#005558" }
+    },
+    {
+      "name": "Frambuesa Fuerte",
+      "hex": "#B0005B",
+      "rgb": { "r": 176, "g": 0, "b": 91 },
+      "role": "secondary",
+      "notes": "Rosa frambuesa profundo balancea fríos; buen contraste con grises fríos.",
+      "tints": { "t10": "#B81A6B", "t30": "#C84C8C", "t60": "#DF99BD" },
+      "shades": { "s10": "#9E0052", "s30": "#7B0040" }
+    }
+  ],
+  "accents": [
+    {
+      "name": "Rojo Cereza Flash",
+      "hex": "#D90F4B",
+      "rgb": { "r": 217, "g": 15, "b": 75 },
+      "role": "accent-energy",
+      "notes": "Cereza saturado favorecido por la estación; energía sin naranja cálido.",
+      "tints": { "t10": "#DD275D", "t30": "#E45781", "t60": "#F09FB7" },
+      "shades": { "s10": "#C30E44", "s30": "#980A34" }
+    },
+    {
+      "name": "Lavanda Fría",
+      "hex": "#9AA3FF",
+      "rgb": { "r": 154, "g": 163, "b": 255 },
+      "role": "accent-calm",
+      "notes": "Lavanda con bias azul; calma y tecnología sin volverse pastel cálido.",
+      "tints": { "t10": "#A9B0FF", "t30": "#C1C7FF", "t60": "#E0E5FF" },
+      "shades": { "s10": "#8B93E6", "s30": "#7077B2" }
+    }
+  ],
+  "neutrals": [
+    {
+      "name": "Negro Nórdico",
+      "hex": "#0B0D14",
+      "rgb": { "r": 11, "g": 13, "b": 20 },
+      "role": "neutral",
+      "notes": "Near-black evita #000 puro y el banding en foto.",
+      "tints": { "t10": "#22262D", "t30": "#575F6D", "t60": "#A5AEBE" },
+      "shades": { "s10": "#0A0C12", "s30": "#07090E" }
+    },
+    {
+      "name": "Gris Acero",
+      "hex": "#5A6B7A",
+      "rgb": { "r": 90, "g": 107, "b": 122 },
+      "role": "neutral",
+      "notes": "Neutro frío y medio que respeta undertone azul.",
+      "tints": { "t10": "#6F7C8A", "t30": "#92A1AC", "t60": "#C5CED5" },
+      "shades": { "s10": "#515F6E", "s30": "#3F4B56" }
+    },
+    {
+      "name": "Gris Niebla",
+      "hex": "#E8EDF5",
+      "rgb": { "r": 232, "g": 237, "b": 245 },
+      "role": "neutral",
+      "notes": "Muy claro, frío; mantiene limpieza sobre fotografías.",
+      "tints": { "t10": "#EBF0F7", "t30": "#F0F3F9", "t60": "#F6F8FC" },
+      "shades": { "s10": "#D1D5DC", "s30": "#A2A8AE" }
+    }
+  ],
+  "backgrounds": [
+    {
+      "name": "Fondo Claro Ártico",
+      "hex": "#F5F7FB",
+      "rgb": { "r": 245, "g": 247, "b": 251 },
+      "role": "background",
+      "notes": "Blanco azulado legible; mejor que blanco puro para largas lecturas.",
+      "tints": { "t10": "#F6F8FB", "t30": "#F8FAFC", "t60": "#FBFCFE" },
+      "shades": { "s10": "#DDE1E6", "s30": "#B1B7BF" }
+    },
+    {
+      "name": "Fondo Oscuro Nocturno",
+      "hex": "#0B0D14",
+      "rgb": { "r": 11, "g": 13, "b": 20 },
+      "role": "background",
+      "notes": "Oscuro frío para drama y enfoque en la imagen.",
+      "tints": { "t10": "#22262D", "t30": "#575F6D", "t60": "#A5AEBE" },
+      "shades": { "s10": "#0A0C12", "s30": "#07090E" }
+    }
+  ],
+  "cta": {
+    "name": "CTA Cereza",
+    "hex": "#D90F4B",
+    "rgb": { "r": 217, "g": 15, "b": 75 },
+    "role": "cta",
+    "notes": "El mismo cereza: destaca en UI y en miniaturas.",
+    "tints": { "t10": "#DD275D", "t30": "#E45781", "t60": "#F09FB7" },
+    "shades": { "s10": "#C30E44", "s30": "#980A34" }
+  },
+  "link": {
+    "name": "Azul Hipervínculo",
+    "hex": "#1463FF",
+    "rgb": { "r": 20, "g": 99, "b": 255 },
+    "role": "link",
+    "notes": "Azul accesible y familiar; funciona en branding tech.",
+    "tints": { "t10": "#2C73FF", "t30": "#5A92FF", "t60": "#A1C1FF" },
+    "shades": { "s10": "#1259E6", "s30": "#0E45B2" }
+  },
+  "utility": {
+    "name": "Gris Borde Frío",
+    "hex": "#D4DAE3",
+    "rgb": { "r": 212, "g": 218, "b": 227 },
+    "role": "utility",
+    "notes": "Neutro frío; usar con 10–30% de opacidad para sombras.",
+    "tints": { "t10": "#D8DEE6", "t30": "#E1E5EB", "t60": "#EEF0F4" },
+    "shades": { "s10": "#BFC4CC", "s30": "#94999F" }
+  }
+}</script>
+  <script id="jsonB" type="application/json">{
+  "primary": {
+    "name": "Azul Noche Caribe",
+    "hex": "#0A2540",
+    "rgb": [10, 37, 64],
+    "tints": { "T10": "#223B53", "T30": "#546679", "T60": "#9DA8B3" },
+    "shades": { "S10": "#09213A", "S30": "#071A2D" }
+  },
+  "secondary": [
+    {
+      "name": "Esmeralda Estudio",
+      "hex": "#007A6E",
+      "rgb": [0, 122, 110],
+      "tints": { "T10": "#1A8F84", "T30": "#52ABA4", "T60": "#9BD0CC" },
+      "shades": { "S10": "#006E63", "S30": "#00554D" }
+    },
+    {
+      "name": "Rojo Cereza",
+      "hex": "#B10F2E",
+      "rgb": [177, 15, 46],
+      "tints": { "T10": "#B92743", "T30": "#C85775", "T60": "#E09DAB" },
+      "shades": { "S10": "#9E0D29", "S30": "#7A0A20" }
+    }
+  ],
+  "accents": [
+    {
+      "name": "Azul Eléctrico",
+      "hex": "#1D4ED8",
+      "rgb": [29, 78, 216],
+      "tints": { "T10": "#3453B7", "T30": "#6279C7", "T60": "#A5B3DF" },
+      "shades": { "S10": "#1B3A9E", "S30": "#152D7A" }
+    },
+    {
+      "name": "Lavanda Fría",
+      "hex": "#6F6DEB",
+      "rgb": [111, 109, 235],
+      "tints": { "T10": "#8786EF", "T30": "#ADADEF", "T60": "#C5C5F7" },
+      "shades": { "S10": "#6362D4", "S30": "#4C4BB0" }
+    }
+  ],
+  "neutrals": [
+    { "name": "Gris Carbón", "hex": "#2B2F36", "rgb": [43, 47, 54] },
+    { "name": "Gris Pizarra", "hex": "#6B7280", "rgb": [107, 114, 128] },
+    { "name": "Gris Acero", "hex": "#A3AFBF", "rgb": [163, 175, 191] }
+  ],
+  "backgrounds": [
+    { "name": "Fondo Claro", "hex": "#F6F8FB", "rgb": [246, 248, 251] },
+    { "name": "Fondo Oscuro", "hex": "#0B0E13", "rgb": [11, 14, 19] }
+  ],
+  "cta": { "name": "Azul Marino Activo", "hex": "#0B3D91", "rgb": [11, 61, 145] },
+  "link": { "name": "Azul Profundo Enlace", "hex": "#1E40AF", "rgb": [30, 64, 175] },
+  "utility": { "name": "Borde Frío", "hex": "#CBD5E1", "rgb": [203, 213, 225] }
+}</script>
+
+  <script id="jsonC" type="application/json">{
+  "principales": [
+    {
+      "nombre": "Blanco Puro",
+      "nota": "Resalta la frescura del rostro.",
+      "hex": "#FFFFFF",
+      "rgb": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "nombre": "Negro",
+      "nota": "Crea un contraste elegante y favorecedor.",
+      "hex": "#000000",
+      "rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "nombre": "Azul Marino",
+      "nota": "Sofisticado y menos severo que el negro.",
+      "hex": "#0B1F3B",
+      "rgb": [
+        11,
+        31,
+        59
+      ]
+    },
+    {
+      "nombre": "Rojo Cereza",
+      "nota": "Aporta vida y luminosidad al rostro.",
+      "hex": "#D2042D",
+      "rgb": [
+        210,
+        4,
+        45
+      ]
+    },
+    {
+      "nombre": "Rojo Frambuesa",
+      "nota": "Un tono más suave, pero igualmente favorecedor.",
+      "hex": "#E30B5D",
+      "rgb": [
+        227,
+        11,
+        93
+      ]
+    },
+    {
+      "nombre": "Verde Esmeralda",
+      "nota": "Intenso y refrescante, complementa los subtonos fríos.",
+      "hex": "#50C878",
+      "rgb": [
+        80,
+        200,
+        120
+      ]
+    },
+    {
+      "nombre": "Verde Pino",
+      "nota": "Un tono más profundo que añade elegancia.",
+      "hex": "#01796F",
+      "rgb": [
+        1,
+        121,
+        111
+      ]
+    },
+    {
+      "nombre": "Púrpura Berenjena",
+      "nota": "Profundo y dramático, ideal para resaltar la piel de invierno.",
+      "hex": "#4C1C64",
+      "rgb": [
+        76,
+        28,
+        100
+      ]
+    },
+    {
+      "nombre": "Lavanda Fría",
+      "nota": "Un toque de color suave que mantiene la armonía con el tono de piel.",
+      "hex": "#C3B6E6",
+      "rgb": [
+        195,
+        182,
+        230
+      ]
+    }
+  ],
+  "neutros": [
+    {
+      "nombre": "Gris Carbón",
+      "nota": "Un neutro sofisticado y versátil.",
+      "hex": "#36454F",
+      "rgb": [
+        54,
+        69,
+        79
+      ]
+    },
+    {
+      "nombre": "Gris Acero",
+      "nota": "Perfecto para un look más suave pero igualmente impactante.",
+      "hex": "#71797E",
+      "rgb": [
+        113,
+        121,
+        126
+      ]
+    }
+  ]
+}</script>
+  <script>
+    // ——— Utilities: color math ———
+    const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
+
+    function hexToRgb(hex) {
+      const h = hex.replace('#', '').trim();
+      if (h.length === 3) {
+        const r = parseInt(h[0] + h[0], 16);
+        const g = parseInt(h[1] + h[1], 16);
+        const b = parseInt(h[2] + h[2], 16);
+        return { r, g, b };
+      }
+      const r = parseInt(h.slice(0, 2), 16);
+      const g = parseInt(h.slice(2, 4), 16);
+      const b = parseInt(h.slice(4, 6), 16);
+      return { r, g, b };
+    }
+
+    function rgbArrayOrObjToObj(rgb) {
+      if (!rgb) return null;
+      if (Array.isArray(rgb)) return { r: rgb[0], g: rgb[1], b: rgb[2] };
+      return rgb;
+    }
+
+    function rgbToHsl(r, g, b) {
+      r /= 255; g /= 255; b /= 255;
+      const max = Math.max(r, g, b), min = Math.min(r, g, b);
+      let h, s, l = (max + min) / 2;
+      if (max === min) { h = s = 0; }
+      else {
+        const d = max - min;
+        s = l > .5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+          case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+          case g: h = (b - r) / d + 2; break;
+          case b: h = (r - g) / d + 4; break;
+        }
+        h /= 6;
+      }
+      return { h: Math.round(h * 360), s: Math.round(s * 100), l: Math.round(l * 100) };
+    }
+
+    function relativeLuminance(r, g, b) {
+      const srgb = [r, g, b].map(v => v / 255).map(v => v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4));
+      return 0.2126 * srgb[0] + 0.7152 * srgb[1] + 0.0722 * srgb[2];
+    }
+
+    function contrastRatio(hex1, hex2) {
+      const c1 = hexToRgb(hex1), c2 = hexToRgb(hex2);
+      const L1 = relativeLuminance(c1.r, c1.g, c1.b);
+      const L2 = relativeLuminance(c2.r, c2.g, c2.b);
+      const lighter = Math.max(L1, L2);
+      const darker = Math.min(L1, L2);
+      return (lighter + 0.05) / (darker + 0.05);
+    }
+
+    function fmtHsl(hsl) { return `hsl(${hsl.h} ${hsl.s}% ${hsl.l}%)`; }
+    function fmtRgb(rgb) { return `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`; }
+
+    // ——— Parsing per-section (no cross-unification) ———
+    function extractItemsFromJSON(jsonObj) {
+      const items = [];
+      const topKeys = Object.keys(jsonObj || {});
+      for (const k of topKeys) {
+        const v = jsonObj[k];
+        if (!v) continue;
+        const group = k; // keep original key as "group" marker
+        if (Array.isArray(v)) {
+          for (const it of v) {
+            if (it && typeof it === 'object') items.push(shapeItem(it, group));
+          }
+        } else if (typeof v === 'object') {
+          // single color object or nested
+          // Heuristic: treat as a color if it has "hex" or "name" or "rgb"
+          if (('hex' in v) || ('name' in v) || ('rgb' in v)) items.push(shapeItem(v, group));
+          // else ignore
+        }
+      }
+      return items;
+    }
+
+    function shapeItem(raw, group) {
+      const name = raw.name || raw.nombre || raw.colorName || '(sin nombre)';
+      const role = raw.role || raw.category || '';
+      const hex = (raw.hex || raw.hexCode || '').toUpperCase();
+      const rgbObj = rgbArrayOrObjToObj(raw.rgb) || (hex ? hexToRgb(hex) : null);
+      const hslObj = rgbObj ? rgbToHsl(rgbObj.r, rgbObj.g, rgbObj.b) : null;
+
+      // Collect tints/shades by pattern (case-insensitive)
+      const tints = [];
+      const shades = [];
+      const t = raw.tints || raw.Tints || raw.TINTS;
+      const s = raw.shades || raw.Shades || raw.SHADES;
+      const pushEntries = (obj, target) => {
+        if (!obj) return;
+        for (const key of Object.keys(obj)) {
+          const val = obj[key];
+          const m = String(key).match(/([tTsS])\s*([\-\+]?\d+)/);
+          const pct = m ? parseInt(m[2], 10) : null;
+          target.push({ key, pct, val });
+        }
+        // sort by pct if available
+        target.sort((a, b) => (a.pct ?? 0) - (b.pct ?? 0));
+      };
+      pushEntries(t, tints);
+      pushEntries(s, shades);
+
+      const notes = raw.notes || raw.nota || '';
+
+      return { name, role, hex, group, rgb: rgbObj, hsl: hslObj, tints, shades, notes };
+    }
+
+    // ——— Rendering ———
+    function makeBadge(text, cls = '') {
+      const span = document.createElement('span');
+      span.className = `badge ${cls}`;
+      span.textContent = text;
+      return span;
+    }
+
+    function verdictBadgesFor(colorHex) {
+      const ratios = [
+        { against: '#000000', r: contrastRatio(colorHex, '#000000') },
+        { against: '#FFFFFF', r: contrastRatio(colorHex, '#FFFFFF') }
+      ];
+      const container = document.createElement('div');
+      container.className = 'badges';
+      for (const { against, r } of ratios) {
+        const rTxt = r.toFixed(2) + ':1 vs ' + (against === '#000000' ? 'negro' : 'blanco');
+        // Normal AA: 4.5, Large AA: 3.0, AAA Normal: 7.0
+        let cls = 'bad';
+        if (r >= 7) cls = 'good';
+        else if (r >= 4.5) cls = 'warn';
+        const label = (r >= 7) ? 'AAA' : (r >= 4.5 ? 'AA' : '—');
+        container.appendChild(makeBadge(`${label} · ${rTxt}`, cls));
+      }
+      return container;
+    }
+
+    function copyText(text) {
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(() => {
+        const live = document.getElementById('ariaLive');
+        live.textContent = `Copiado: ${text}`;
+      });
+    }
+
+    function renderItems(items, mountEl, countEl) {
+      mountEl.innerHTML = '';
+      items.forEach((it) => {
+        const card = document.createElement('article');
+        card.className = 'card';
+        card.tabIndex = 0;
+
+        const sw = document.createElement('div');
+        sw.className = 'swatch';
+        const ink = document.createElement('div');
+        ink.className = 'ink';
+        if (it.hex) ink.style.background = it.hex;
+        sw.appendChild(ink);
+
+        const content = document.createElement('div');
+        content.className = 'content';
+
+        const title = document.createElement('div');
+        title.style.fontWeight = '700';
+        title.style.fontSize = '15px';
+        title.textContent = it.name;
+
+        const meta = document.createElement('div');
+        meta.className = 'chips';
+        const group = document.createElement('span'); group.className = 'chip'; group.textContent = it.group || '—';
+        const role = document.createElement('span'); role.className = 'chip'; role.textContent = it.role || '—';
+        meta.appendChild(group); meta.appendChild(role);
+
+        const kvs = document.createElement('div');
+        kvs.className = 'kvs';
+        const rgbStr = it.rgb ? fmtRgb(it.rgb) : '—';
+        const hslStr = it.hsl ? fmtHsl(it.hsl) : '—';
+        const rows = [
+          ['HEX', it.hex || '—', it.hex],
+          ['RGB', rgbStr, rgbStr],
+          ['HSL', hslStr, hslStr],
+        ];
+        for (const [k, v, copyable] of rows) {
+          const kd = document.createElement('div'); kd.className = 'k'; kd.textContent = k;
+          const vd = document.createElement('div');
+          const btn = document.createElement('button');
+          btn.className = 'btn';
+          btn.style.marginLeft = '8px';
+          btn.textContent = 'Copiar';
+          btn.addEventListener('click', () => copyText(copyable || ''));
+          const span = document.createElement('span'); span.textContent = v;
+          vd.appendChild(span); vd.appendChild(btn);
+          kvs.appendChild(kd); kvs.appendChild(vd);
+        }
+
+        const badges = it.hex ? verdictBadgesFor(it.hex) : document.createElement('div');
+
+        // tints/shades mini grid
+        const tWrap = document.createElement('div');
+        if (it.tints && it.tints.length) {
+          const lbl = document.createElement('div'); lbl.className = 'k'; lbl.textContent = 'Tints';
+          const grid = document.createElement('div'); grid.className = 'tints';
+          it.tints.forEach(ts => {
+            const m = document.createElement('div'); m.className = 'mini'; m.title = `${ts.key} ${ts.val}`;
+            m.style.background = ts.val;
+            m.style.borderColor = 'var(--border)';
+            grid.appendChild(m);
+          });
+          tWrap.appendChild(lbl); tWrap.appendChild(grid);
+        }
+
+        const sWrap = document.createElement('div');
+        if (it.shades && it.shades.length) {
+          const lbl = document.createElement('div'); lbl.className = 'k'; lbl.textContent = 'Shades';
+          const grid = document.createElement('div'); grid.className = 'shades';
+          it.shades.forEach(ts => {
+            const m = document.createElement('div'); m.className = 'mini'; m.title = `${ts.key} ${ts.val}`;
+            m.style.background = ts.val; m.style.borderColor = 'var(--border)';
+            grid.appendChild(m);
+          });
+          sWrap.appendChild(lbl); sWrap.appendChild(grid);
+        }
+
+        const notes = document.createElement('div');
+        if (it.notes) {
+          notes.className = 'meta';
+          notes.textContent = it.notes;
+        }
+
+        content.appendChild(title);
+        content.appendChild(meta);
+        content.appendChild(kvs);
+        content.appendChild(badges);
+        if (tWrap.childNodes.length) content.appendChild(tWrap);
+        if (sWrap.childNodes.length) content.appendChild(sWrap);
+        if (notes.textContent) content.appendChild(notes);
+
+        card.appendChild(sw);
+        card.appendChild(content);
+        mountEl.appendChild(card);
+      });
+      countEl.textContent = items.length + ' colores';
+    }
+
+    // ——— Search filtering per section + global ———
+    function makeFilterFn(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) return () => true;
+      return (it) => {
+        const haystack = [it.name, it.role, it.group, it.hex,
+        it.rgb ? fmtRgb(it.rgb) : '', it.hsl ? fmtHsl(it.hsl) : '',
+        it.notes || ''
+        ].join(' ').toLowerCase();
+        return haystack.includes(q);
+      };
+    }
+
+    // ——— Theme ———
+    const themeBtn = document.getElementById('themeBtn');
+    function setTheme(mode) {
+      document.body.setAttribute('data-theme', mode);
+      themeBtn.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
+    }
+    themeBtn.addEventListener('click', () => {
+      const current = document.body.getAttribute('data-theme') || 'dark';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // ——— Bootstrap page ———
+    const dataA = JSON.parse(document.getElementById('jsonA').textContent);
+    const dataB = JSON.parse(document.getElementById('jsonB').textContent);
+    const dataC = JSON.parse(document.getElementById('jsonC').textContent);
+
+    const itemsA = extractItemsFromJSON(dataA);
+    const itemsB = extractItemsFromJSON(dataB);
+    const itemsC = extractItemsFromJSON(dataC);
+
+    const gridA = document.getElementById('gridA');
+    const gridB = document.getElementById('gridB');
+    const gridC = document.getElementById('gridC');
+    const countA = document.getElementById('countA');
+    const countB = document.getElementById('countB');
+    const countC = document.getElementById('countC');
+
+    let filteredA = itemsA.slice();
+    let filteredB = itemsB.slice();
+    let filteredC = itemsC.slice();
+
+    renderItems(filteredA, gridA, countA);
+    renderItems(filteredB, gridB, countB);
+    renderItems(filteredC, gridC, countC);
+
+    document.getElementById('qA').addEventListener('input', (e) => {
+      filteredA = itemsA.filter(makeFilterFn(e.target.value));
+      renderItems(filteredA, gridA, countA);
+    });
+    document.getElementById('qB').addEventListener('input', (e) => {
+      filteredB = itemsB.filter(makeFilterFn(e.target.value));
+      renderItems(filteredB, gridB, countB);
+    });
+    document.getElementById('qC').addEventListener('input', (e) => {
+      filteredC = itemsC.filter(makeFilterFn(e.target.value));
+      renderItems(filteredC, gridC, countC);
+    });
+    document.getElementById('qGlobal').addEventListener('input', (e) => {
+      const fn = makeFilterFn(e.target.value);
+      filteredA = itemsA.filter(fn);
+      filteredB = itemsB.filter(fn);
+      filteredC = itemsC.filter(fn);
+      renderItems(filteredA, gridA, countA);
+      renderItems(filteredB, gridB, countB);
+      renderItems(filteredC, gridC, countC);
+    });
+
+    // default theme
+    setTheme('dark');
+  </script>
+</body>
+
+</html>
