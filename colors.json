@@ -1,0 +1,71 @@
+{
+  "owner": "Abraham Duran",
+  "description": "Canonical brand color specification. Three palettes: colorimetry-based (personal color analysis), and two generated role-based palettes for digital/UI use.",
+  "url": "https://brand.abrahamduran.com",
+  "colorimetry": {
+    "description": "Colors from professional colorimetry analysis. Season: Winter (cool undertones, high contrast).",
+    "main": [
+      { "name": "Blanco Puro", "hex": "#FFFFFF", "rgb": [255, 255, 255], "note": "Highlights facial freshness." },
+      { "name": "Negro", "hex": "#000000", "rgb": [0, 0, 0], "note": "Elegant, flattering contrast." },
+      { "name": "Azul Marino", "hex": "#0B1F3B", "rgb": [11, 31, 59], "note": "Sophisticated, less severe than black." },
+      { "name": "Rojo Cereza", "hex": "#D2042D", "rgb": [210, 4, 45], "note": "Adds life and luminosity to the face." },
+      { "name": "Rojo Frambuesa", "hex": "#E30B5D", "rgb": [227, 11, 93], "note": "Softer but equally flattering." },
+      { "name": "Verde Esmeralda", "hex": "#50C878", "rgb": [80, 200, 120], "note": "Intense, refreshing, complements cool undertones." },
+      { "name": "Verde Pino", "hex": "#01796F", "rgb": [1, 121, 111], "note": "Deeper green, adds elegance." },
+      { "name": "Púrpura Berenjena", "hex": "#4C1C64", "rgb": [76, 28, 100], "note": "Deep and dramatic, ideal for winter skin." },
+      { "name": "Lavanda Fría", "hex": "#C3B6E6", "rgb": [195, 182, 230], "note": "Soft color maintaining harmony with skin tone." }
+    ],
+    "neutrals": [
+      { "name": "Gris Carbón", "hex": "#36454F", "rgb": [54, 69, 79], "note": "Sophisticated, versatile neutral." },
+      { "name": "Gris Acero", "hex": "#71797E", "rgb": [113, 121, 126], "note": "Softer but equally impactful." }
+    ]
+  },
+  "palette1": {
+    "description": "Primary generated brand palette with role assignments for digital and UI use.",
+    "primary": { "name": "Azul Noche Caribe", "hex": "#174077", "rgb": [23, 64, 119], "role": "primary", "note": "Cool navy; authority without washing out medium neutral skin.", "tints": ["#2E5385", "#5D79A0", "#A2B3C9"], "shades": ["#153A6B", "#102D53"] },
+    "secondary": [
+      { "name": "Esmeralda Estudio", "hex": "#007A7E", "rgb": [0, 122, 126], "role": "secondary", "note": "Blue-green; works with props and studio backgrounds.", "tints": ["#1A878B", "#4CA2A5", "#99CACB"], "shades": ["#006E71", "#005558"] },
+      { "name": "Frambuesa Fuerte", "hex": "#B0005B", "rgb": [176, 0, 91], "role": "secondary", "note": "Deep raspberry; balances cool tones.", "tints": ["#B81A6B", "#C84C8C", "#DF99BD"], "shades": ["#9E0052", "#7B0040"] }
+    ],
+    "accents": [
+      { "name": "Rojo Cereza Flash", "hex": "#D90F4B", "rgb": [217, 15, 75], "role": "accent-energy", "note": "Saturated cherry; energy without warm orange.", "tints": ["#DD275D", "#E45781", "#F09FB7"], "shades": ["#C30E44", "#980A34"] },
+      { "name": "Lavanda Fría", "hex": "#9AA3FF", "rgb": [154, 163, 255], "role": "accent-calm", "note": "Blue-biased lavender; calm and tech.", "tints": ["#A9B0FF", "#C1C7FF", "#E0E5FF"], "shades": ["#8B93E6", "#7077B2"] }
+    ],
+    "neutrals": [
+      { "name": "Negro Nórdico", "hex": "#0B0D14", "rgb": [11, 13, 20], "role": "neutral-dark", "note": "Near-black; avoids #000 banding in photos.", "tints": ["#22262D", "#575F6D", "#A5AEBE"], "shades": ["#0A0C12", "#07090E"] },
+      { "name": "Gris Acero", "hex": "#5A6B7A", "rgb": [90, 107, 122], "role": "neutral-mid", "note": "Cool mid-grey respecting blue undertone.", "tints": ["#6F7C8A", "#92A1AC", "#C5CED5"], "shades": ["#515F6E", "#3F4B56"] },
+      { "name": "Gris Niebla", "hex": "#E8EDF5", "rgb": [232, 237, 245], "role": "neutral-light", "note": "Very light cool; clean over photos.", "tints": ["#EBF0F7", "#F0F3F9", "#F6F8FC"], "shades": ["#D1D5DC", "#A2A8AE"] }
+    ],
+    "backgrounds": [
+      { "name": "Fondo Claro Ártico", "hex": "#F5F7FB", "rgb": [245, 247, 251], "role": "background-light", "note": "Blue-white; better than pure white for long reads.", "tints": ["#F6F8FB", "#F8FAFC", "#FBFCFE"], "shades": ["#DDE1E6", "#B1B7BF"] },
+      { "name": "Fondo Oscuro Nocturno", "hex": "#0B0D14", "rgb": [11, 13, 20], "role": "background-dark", "note": "Cool dark for drama and image focus.", "tints": ["#22262D", "#575F6D", "#A5AEBE"], "shades": ["#0A0C12", "#07090E"] }
+    ],
+    "cta": { "name": "CTA Cereza", "hex": "#D90F4B", "rgb": [217, 15, 75], "role": "cta", "note": "Cherry; stands out in UI and thumbnails.", "tints": ["#DD275D", "#E45781", "#F09FB7"], "shades": ["#C30E44", "#980A34"] },
+    "link": { "name": "Azul Hipervínculo", "hex": "#1463FF", "rgb": [20, 99, 255], "role": "link", "note": "Accessible, familiar blue; works in tech branding.", "tints": ["#2C73FF", "#5A92FF", "#A1C1FF"], "shades": ["#1259E6", "#0E45B2"] },
+    "utility": { "name": "Gris Borde Frío", "hex": "#D4DAE3", "rgb": [212, 218, 227], "role": "utility", "note": "Cool neutral; use at 10-30% opacity for shadows.", "tints": ["#D8DEE6", "#E1E5EB", "#EEF0F4"], "shades": ["#BFC4CC", "#94999F"] }
+  },
+  "palette2": {
+    "description": "Alternative generated brand palette with the same role structure but different values.",
+    "primary": { "name": "Azul Noche Caribe", "hex": "#0A2540", "rgb": [10, 37, 64], "role": "primary", "tints": ["#223B53", "#546679", "#9DA8B3"], "shades": ["#09213A", "#071A2D"] },
+    "secondary": [
+      { "name": "Esmeralda Estudio", "hex": "#007A6E", "rgb": [0, 122, 110], "role": "secondary", "tints": ["#1A8F84", "#52ABA4", "#9BD0CC"], "shades": ["#006E63", "#00554D"] },
+      { "name": "Rojo Cereza", "hex": "#B10F2E", "rgb": [177, 15, 46], "role": "secondary", "tints": ["#B92743", "#C85775", "#E09DAB"], "shades": ["#9E0D29", "#7A0A20"] }
+    ],
+    "accents": [
+      { "name": "Azul Eléctrico", "hex": "#1D4ED8", "rgb": [29, 78, 216], "role": "accent", "tints": ["#3453B7", "#6279C7", "#A5B3DF"], "shades": ["#1B3A9E", "#152D7A"] },
+      { "name": "Lavanda Fría", "hex": "#6F6DEB", "rgb": [111, 109, 235], "role": "accent", "tints": ["#8786EF", "#ADADEF", "#C5C5F7"], "shades": ["#6362D4", "#4C4BB0"] }
+    ],
+    "neutrals": [
+      { "name": "Gris Carbón", "hex": "#2B2F36", "rgb": [43, 47, 54] },
+      { "name": "Gris Pizarra", "hex": "#6B7280", "rgb": [107, 114, 128] },
+      { "name": "Gris Acero", "hex": "#A3AFBF", "rgb": [163, 175, 191] }
+    ],
+    "backgrounds": [
+      { "name": "Fondo Claro", "hex": "#F6F8FB", "rgb": [246, 248, 251] },
+      { "name": "Fondo Oscuro", "hex": "#0B0E13", "rgb": [11, 14, 19] }
+    ],
+    "cta": { "name": "Azul Marino Activo", "hex": "#0B3D91", "rgb": [11, 61, 145], "role": "cta" },
+    "link": { "name": "Azul Profundo Enlace", "hex": "#1E40AF", "rgb": [30, 64, 175], "role": "link" },
+    "utility": { "name": "Borde Frío", "hex": "#CBD5E1", "rgb": [203, 213, 225], "role": "utility" }
+  }
+}

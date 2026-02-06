@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Abraham Duran's canonical brand color specification. Contains three palettes (colorimetry-based, generated 1, generated 2) with hex, RGB, HSL values, tints, shades, WCAG contrast ratios, and usage roles (primary, secondary, accent, neutral, background, CTA, link, utility)." />
+  <meta name="robots" content="index, follow" />
   <title>Abraham Duran - Brand Colors</title>
   <style>
     :root {
@@ -342,7 +344,7 @@
     <div id="ariaLive" class="sr-only" aria-live="polite"></div>
   </main>
 
-  <!-- Inline JSON fallbacks (the page uses these directly) -->
+  <!-- Palette A: "Paleta Generada 1" — Generated brand palette with roles (primary, secondary, accent, neutral, background, CTA, link, utility). Fields: name, hex, rgb, role, notes, tints, shades. -->
   <script id="jsonA" type="application/json">{
   "primary": {
     "name": "Azul Noche Caribe",
@@ -470,6 +472,7 @@
     "shades": { "s10": "#BFC4CC", "s30": "#94999F" }
   }
 }</script>
+  <!-- Palette B: "Paleta Generada 2" — Second generated brand palette. Same role structure as Palette A but different hex values. Fields: name, hex, rgb, tints, shades. -->
   <script id="jsonB" type="application/json">{
   "primary": {
     "name": "Azul Noche Caribe",
@@ -524,6 +527,7 @@
   "utility": { "name": "Borde Frío", "hex": "#CBD5E1", "rgb": [203, 213, 225] }
 }</script>
 
+  <!-- Palette C: "Paleta de Colores por Colorimetría" — Colors derived from personal colorimetry analysis (Winter season). Uses Spanish field names: nombre, nota. Groups: principales (main colors), neutros (neutrals). -->
   <script id="jsonC" type="application/json">{
   "principales": [
     {
